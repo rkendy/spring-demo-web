@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html th:fragment="layout (template, menu)">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      th:href="@{/resources/images/favicon.png}"
+    />
+
+    <title>App Name</title>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- <link rel="stylesheet" th:href="@{/resources/css/mycssfile.css}" /> -->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">MENU/HEADER</div>
+    </nav>
+    <div class="container-fluid">
+      <div class="container xd-container">
+        <th:block th:include="${template}" />
+        <br />
+        <br />
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">FOOTER</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

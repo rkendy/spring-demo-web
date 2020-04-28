@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  th:replace="~{layout :: layout (~{::body},'home')}"
+>
   <head>
     <meta charset="UTF-8" />
-    <title>Adding Result</title>
   </head>
   <body>
     <h1 th:text="#{welcome}">Welcome Default</h1>
