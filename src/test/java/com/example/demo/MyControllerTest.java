@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -36,7 +37,7 @@ public class MyControllerTest {
 
     @Test
     void showCalculationResultTest() throws Exception {
-        when(service.calculate(10, 20)).thenReturn(30);
+        when(service.calculate(anyInt(), anyInt())).thenReturn(30);
         mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(view().name("resultView"))
                 .andExpect(model().attribute("result", 30));
     }
