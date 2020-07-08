@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>Controller 2</title>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
   </head>
   <body>
     <h1>Adding two integers</h1>
     <p th:text="${result}">Result from a and b</p>
+    <div class="container">
+      <br />
+      <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+        <strong>Success!</strong> Webjar (jquery/bootstrap) is working as we
+        expected.
+      </div>
+    </div>
   </body>
 </html>
